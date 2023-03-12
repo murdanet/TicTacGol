@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Juego"
+    android:background="#0D1821"
+    android:id="@+id/mainlayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/encabezado"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/blanco"
+            android:background="@drawable/messicara_low"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/messi"
+            android:text="@string/messi"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textAlignment="textStart"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/mbappe"
+            android:text="@string/mbappe"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textAlignment="textEnd"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/mbappe2"
+            android:background="@drawable/mpapo_low"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="260dp"
+        android:id="@+id/tableboard"
+        android:layout_below="@id/encabezado"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/tablerointro"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/uno"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:id="@+id/dos"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/tres"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/cuatro"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_below="@id/uno"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:id="@+id/cinco"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignTop="@id/cuatro"
+            android:layout_alignStart="@+id/dos"
+            />
+
+        <ImageView
+            android:id="@+id/seis"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignTop="@id/cinco"
+            android:layout_alignStart="@id/tres"/>
+
+        <ImageView
+            android:id="@+id/siete"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <ImageView
+            android:id="@+id/ocho"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignTop="@id/ocho"
+            android:layout_below="@id/cinco"
+            android:layout_alignStart="@id/seis"
+            />
+
+        <ImageView
+            android:id="@+id/nueve"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignTop="@id/ocho"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/iniciaJuego"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tableboard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ovalo_button"
+        android:text="@string/iniciar"
+        android:textColor="@color/white"
+        android:onClick="iniciar"/>
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cronometro"
+        android:layout_below="@id/iniciaJuego"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/contenedorBotones"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/cronometro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/salida"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:drawable/ic_menu_revert"
+            android:backgroundTint="@color/white"
+            android:onClick="salirjuego"
+            />
+
+        <Button
+            android:id="@+id/pausa"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:background="@android:drawable/ic_media_pause"
+            android:backgroundTint="@color/white"
+            android:onClick="pausarJuego"
+            />
+
+        <Button
+            android:id="@+id/resetear"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:background="@android:drawable/ic_menu_rotate"
+            android:backgroundTint="@color/white"
+            android:onClick="resetear"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

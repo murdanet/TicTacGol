@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TickTackToe</string>
+    <string name="TickTackGol">TickTackGol</string>
+    <string name="messi"></string>
+    <string name="mbappe"></string>
+    <string name="iniciar">Iniciar Juego</string>
+</resources>
